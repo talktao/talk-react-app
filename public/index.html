@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>React App</title>
+  <link rel="stylesheet" href="./reset.css">
+</head>
+<script>
+  ! function (e, t) {
+    function n() {
+      t.body ? t.body.style.fontSize = 12 * o + "px" : t.addEventListener("DOMContentLoaded", n)
+    }
+
+    function d() {
+      var e = i.clientWidth / 10;
+      i.style.fontSize = e + "px"
+    }
+    var i = t.documentElement,
+      o = e.devicePixelRatio || 1;
+    if (n(), d(), e.addEventListener("resize", d), e.addEventListener("pageshow", function (e) {
+        e.persisted && d()
+      }), o >= 2) {
+      var a = t.createElement("body"),
+        s = t.createElement("div");
+      s.style.border = ".5px solid transparent", a.appendChild(s), i.appendChild(a), 1 === s.offsetHeight && i.classList
+        .add("hairlines"), i.removeChild(a)
+    }
+  }(window, document);
+</script>
+
+<body>
+  <noscript>You need to enable JavaScript to run this app.</noscript>
+  <div id="root"></div>
+  <!--
+      This HTML file is a template.
+      If you open it directly in the browser, you will see an empty page.
+
+      You can add webfonts, meta tags, or analytics to this file.
+      The build step will place the bundled scripts into the <body> tag.
+
+      To begin the development, run `npm start` or `yarn start`.
+      To create a production bundle, use `npm run build` or `yarn build`.
+    -->
+</body>
+
+</html>

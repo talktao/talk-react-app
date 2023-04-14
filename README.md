@@ -1,2 +1,2 @@
 
-<h1 align="center">医疗大数据pc</h1>
+<h1 align="center">react 模板</h1>

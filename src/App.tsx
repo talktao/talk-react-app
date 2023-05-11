@@ -9,38 +9,15 @@ import {
     isRouteErrorResponse,
 } from "react-router-dom";
 import React, { Suspense } from "react";
-import axios from "./helpers/axios";
 const Home = React.lazy(() => import('@/pages/home/index'));
-const Login = React.lazy(() => import('@/pages/login/index'));
+const My = React.lazy(() => import('@/pages/my/index'));
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 
-function News() {
-    return <div>home news</div>
-}
-
-function Message() {
-    return <div>
-        home message
-        <Outlet />
-    </div>
-}
-
 function Demo() {
-    console.log('redirect to login')
-    return <Navigate to={routesUrl.login} />
+    console.log('redirect to home');
+    return <Navigate to={routesUrl.home} />;
 }
 
-
-function Detail() {
-    const { id, title, content } = useParams()
-    let team = useLoaderData();
-    debugger
-    return <div>home message detail
-        <li>消息编号：{id}</li>
-        <li>消息标题：{title}</li>
-        <li>消息内容：{content}</li>
-    </div>
-}
 function RootBoundary() {
     const error = useRouteError();
 
@@ -72,32 +49,10 @@ const routes: RouteObject[] = [
         path: '/home',
         element: <Home />,
         errorElement: <RootBoundary />,
-        children: [
-            { path: 'news', element: <News /> },
-            {
-                path: 'message',
-                element: <Message />,
-                children: [
-                    // 声明接收参数
-                    {
-                        path: 'detail/:id/:title/:content',
-                        element: <Detail />,
-                        loader: async ({ request, params }) => {
-                            debugger
-                            console.log(params)
-                            const data = await axios.get('http://localhost:9000/hello')
-                            // const data = await axios.get('https://sspmwx.scms.sztv.com.cn/api/com/article/getArticleList?page=1&pageSize=12&tenantId=ssp&specialtype=1&extendtype=1&catalogId=16176&banner=0')
-                            debugger
-                            return data
-                        },
-                    }
-                ]
-            },
-        ],
     },
     {
-        path: '/login',
-        element: <Login />
+        path: '/my',
+        element: <My />
     },
     // 路由重定向
     {
@@ -105,9 +60,9 @@ const routes: RouteObject[] = [
         element: <Demo />,
         errorElement: <RootBoundary />
     }
-]
+];
 
-const router = createBrowserRouter(routes)
+const router = createBrowserRouter(routes);
 
 
 function App() {

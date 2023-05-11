@@ -1,3 +1,4 @@
+import { fastmockId } from "@/const/fastmockId";
 import createErrorLog from "./createErrorLog";
 import axios from 'axios';
 
@@ -15,10 +16,14 @@ import axios from 'axios';
 // instance.defaults.headers.common['Authorization'] = AUTH_TOKEN;
 
 
-export default axios
+export default axios;
 
 export const cmsAxios = axios.create({
     baseURL: 'https://sspmwx.scms.sztv.com.cn/api/com'
+});
+
+export const mockAxios = axios.create({
+    baseURL: `https://www.fastmock.site/mock/${fastmockId}`
 });
 
 // 添加响应拦截器

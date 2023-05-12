@@ -1,0 +1,38 @@
+.tabbar {
+    position: fixed;
+    bottom: 0;
+    width: 100vw;
+    height: 60px;
+    background: #FFFFFF;
+    box-shadow: 0px -2px 4px 0px rgba(0, 0, 0, 0.06);
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+
+    .tabbarItem {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+
+        img {
+            width: 26px;
+            height: 26px;
+            margin-bottom: 5px;
+        }
+
+        div {
+            font-size: 11px;
+            font-family: PingFangSC-Regular, PingFang SC;
+            font-weight: 400;
+            color: #4a4a4a;
+            // line-height: 11px;
+
+            &.active {
+                color: #1296db;
+            }
+        }
+
+
+    }
+}

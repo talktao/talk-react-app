@@ -18,14 +18,10 @@ import axios from 'axios';
 
 export default axios;
 
-export const cmsAxios = axios.create({
-    baseURL: 'https://sspmwx.scms.sztv.com.cn/api/com'
-});
-
 export const mockAxios = axios.create({
     baseURL: `https://www.fastmock.site/mock/${fastmockId}`
 });
 
 // 添加响应拦截器
-cmsAxios.interceptors.response.use(response => response, createErrorLog(['status', 'statusText']));
+mockAxios.interceptors.response.use(response => response, createErrorLog(['status', 'statusText']));
 

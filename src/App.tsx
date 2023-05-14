@@ -11,7 +11,7 @@ import {
 import React, { Suspense } from "react";
 const Home = React.lazy(() => import('@/pages/home/index'));
 const My = React.lazy(() => import('@/pages/my/index'));
-import { createBrowserRouter, RouterProvider } from 'react-router-dom';
+import { createBrowserRouter, createHashRouter, RouterProvider } from 'react-router-dom';
 
 function Demo() {
     console.log('redirect to home');
@@ -54,6 +54,7 @@ const routes: RouteObject[] = [
         path: '/my',
         element: <My />
     },
+
     // 路由重定向
     {
         path: '/',
@@ -62,7 +63,7 @@ const routes: RouteObject[] = [
     }
 ];
 
-const router = createBrowserRouter(routes);
+const router = createHashRouter(routes);
 
 
 function App() {

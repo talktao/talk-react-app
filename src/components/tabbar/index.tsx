@@ -1,35 +1,28 @@
-import { FC, useEffect, useState } from "react";
+import { FC, useEffect, useMemo, useState } from "react";
 import { tabbarProps } from "@/type/tabbar";
-import { useNavigate, useLocation } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 import { tabbarConfig } from './config';
 import style from './index.module.less';
+import { useUpdate } from "ahooks";
 
 type tabbarType = {
     path: string;
 };
 
-const Tabbar: FC<tabbarType> = ({ path }) => {
+const Tabbar: FC<tabbarType> = () => {
 
-    const [currentRoute, setCurrentRoute] = useState(path);
     const navigate = useNavigate();
+    const loacation = useLocation();
 
-    const clickTab = (tab: tabbarProps) => {
-        setCurrentRoute(tab.route);
-    };
-
-    useEffect(() => {
-        navigate(currentRoute);
-    }, [currentRoute]);
+    const tabbarList = useMemo(() => tabbarConfig.map(tab => (
+        <div key={tab.name} className={style.tabbarItem} onClick={() => navigate(tab.route)}>
+            <img src={loacation.pathname === tab.route ? tab.active : tab.icon} alt="" />
+            <div className={loacation.pathname === tab.route ? style.active : ''}>{tab.name}</div>
+        </div>
+    )), [loacation.pathname]);
 
     return <div className={style.tabbar}>
-        {
-            tabbarConfig.map(tab => {
-                return <div key={tab.name} className={style.tabbarItem} onClick={() => clickTab(tab)}>
-                    <img src={currentRoute === tab.route ? tab.active : tab.icon} alt="" />
-                    <div className={currentRoute === tab.route ? style.active : ''}>{tab.name}</div>
-                </div>;
-            })
-        }
+        {tabbarList}
     </div>;
 };
 

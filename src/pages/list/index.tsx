@@ -7,10 +7,7 @@ import Card from './card';
 
 const List: FC = () => {
 
-    const { list, ifDone } = useListPages(ApiCollector.getArticleList, {});
-
-    console.log(list, 'list');
-
+    const { list, ifDone } = useListPages(ApiCollector.getList, {});
 
     return <div className={styles.list}>
         {

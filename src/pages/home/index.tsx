@@ -1,16 +1,13 @@
+import { FC } from 'react';
 import ApiCollector from '@/const/apis';
-import render from '@/helpers/render';
 import useMockRequest from '@/hooks/useMockRequest';
-import { Link, Outlet } from 'react-router-dom';
-import { observer } from 'mobx-react-lite';
-import counterStore from '@/store/count';
-import { BulletList } from 'react-content-loader';
 import Logo from '@/images/logo.png';
 import styles from './index.module.less';
 import Tabbar from '@/components/tabbar';
 import { routesUrl } from '@/const/routes';
 import get from 'lodash/get';
 import HomeLoader from '@/components/skeleton/homeLoader';
+import { useNavigate } from 'react-router';
 
 interface List {
     id: number;
@@ -23,8 +20,16 @@ interface Data {
     list: List[];
 }
 
-function Home() {
+const Home: FC = () => {
+
+    const navigate = useNavigate();
+
     const { data, error, loading } = useMockRequest<Data>(ApiCollector.getHome, {});
+
+    const deep = (id) => {
+
+        if (id === 9) return navigate('/list');
+    };
 
     if (loading) {
         return <div className={styles.loader}>
@@ -43,7 +48,7 @@ function Home() {
             <div className={styles.list}>
                 {
                     get(data, 'list', []).map(item => (
-                        <div className={styles.item} key={item.id}>
+                        <div className={styles.item} key={item.id} onClick={() => deep(item.id)}>
                             <span>{item.content}</span>
                         </div>
                     ))
@@ -52,9 +57,9 @@ function Home() {
         </div>
         <Tabbar path={routesUrl.home} />
     </div>;
-}
+};
 
-export default observer(Home);
+export default Home;
 
 
 // if (process.env.NODE_ENV === 'development') {

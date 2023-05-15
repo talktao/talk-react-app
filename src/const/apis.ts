@@ -12,6 +12,11 @@ const ApiCollector: {
     getCmsCatalogList: {
         method: 'get',
         url: '/api/login',
+    },
+
+    getList: {
+        method: 'get',
+        url: '/api/list'
     }
 };
 

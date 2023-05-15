@@ -10,6 +10,7 @@ import {
 } from "react-router-dom";
 import React, { Suspense } from "react";
 const Home = React.lazy(() => import('@/pages/home/index'));
+const List = React.lazy(() => import('@/pages/list/index'));
 const My = React.lazy(() => import('@/pages/my/index'));
 import { createBrowserRouter, createHashRouter, RouterProvider } from 'react-router-dom';
 
@@ -48,6 +49,11 @@ const routes: RouteObject[] = [
     {
         path: '/home',
         element: <Home />,
+        errorElement: <RootBoundary />,
+    },
+    {
+        path: '/list',
+        element: <List />,
         errorElement: <RootBoundary />,
     },
     {

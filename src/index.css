@@ -12,8 +12,18 @@ code {
     monospace;
 }
 
+@font-face {
+  font-family: 'Poppins-Bold';
+  src: url('src/global/fonts/Poppins-Bold.eot');
+  src:
+    url('src/global/fonts/Poppins-Bold.eot?#font-spider') format('embedded-opentype'),
+    url('src/global/fonts/Poppins-Bold.woff2') format('woff2'),
+    url('src/global/fonts/Poppins-Bold.woff') format('woff'),
+    url('src/global/fonts/Poppins-Bold.ttf') format('truetype'),
+    url('src/global/fonts/Poppins-Bold.svg') format('svg');
+}
+
 .c-toast {
   font-size: 16px;
   white-space: nowrap;
 }
-

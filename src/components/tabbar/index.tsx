@@ -1,9 +1,7 @@
-import { FC, useEffect, useMemo, useState } from "react";
-import { tabbarProps } from "@/type/tabbar";
+import { FC, useMemo } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
 import { tabbarConfig } from './config';
 import style from './index.module.less';
-import { useUpdate } from "ahooks";
 
 type tabbarType = {
     path: string;

@@ -8,6 +8,8 @@ import { routesUrl } from '@/const/routes';
 import get from 'lodash/get';
 import HomeLoader from '@/components/skeleton/homeLoader';
 import { useNavigate } from 'react-router';
+import { ScrollRestoration } from 'react-router-dom';
+import Layout from '@/components/layout';
 
 interface List {
     id: number;
@@ -38,25 +40,29 @@ const Home: FC = () => {
         </div>;
     }
 
-    return <div className={styles.home}>
-        <div className={styles.content}>
-            <div className={styles.title}>
-                <img src={Logo} alt="" />
-                {get(data, 'title', '')}
+    return <Layout title="首页" >
+        <div className={styles.home}>
+            <ScrollRestoration />
+            <div className={styles.content}>
+                <div className={styles.title}>
+                    <img src={Logo} alt="" />
+                    {get(data, 'title', '')}
+                </div>
+                <div className={styles.subTitle}>{get(data, 'subTitle', '')}</div>
+                <div className={styles.list}>
+                    {
+                        get(data, 'list', []).map(item => (
+                            <div className={styles.item} key={item.id} onClick={() => deep(item.id)}>
+                                <span>{item.content}</span>
+                            </div>
+                        ))
+                    }
+                </div>
             </div>
-            <div className={styles.subTitle}>{get(data, 'subTitle', '')}</div>
-            <div className={styles.list}>
-                {
-                    get(data, 'list', []).map(item => (
-                        <div className={styles.item} key={item.id} onClick={() => deep(item.id)}>
-                            <span>{item.content}</span>
-                        </div>
-                    ))
-                }
-            </div>
+            <Tabbar path={routesUrl.home} />
         </div>
-        <Tabbar path={routesUrl.home} />
-    </div>;
+    </Layout>;
+
 };
 
 export default Home;

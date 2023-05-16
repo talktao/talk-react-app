@@ -11,9 +11,10 @@ interface LiProps {
 
 type CardType = {
     li: LiProps,
+    loading: boolean;
 };
 
-const Card: FC<CardType> = ({ li }) => {
+const Card: FC<CardType> = ({ li, loading }) => {
 
     return <div className={styles.card}>
         <img src={li.image} alt="" />

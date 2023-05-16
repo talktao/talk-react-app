@@ -13,6 +13,7 @@ const Home = React.lazy(() => import('@/pages/home/index'));
 const List = React.lazy(() => import('@/pages/list/index'));
 const My = React.lazy(() => import('@/pages/my/index'));
 import { createBrowserRouter, createHashRouter, RouterProvider } from 'react-router-dom';
+import KeepAlive from "./components/keepalive";
 
 function Demo() {
     console.log('redirect to home');
@@ -47,14 +48,20 @@ function RootBoundary() {
 // 路由映射表
 const routes: RouteObject[] = [
     {
-        path: '/home',
-        element: <Home />,
-        errorElement: <RootBoundary />,
-    },
-    {
-        path: '/list',
-        element: <List />,
-        errorElement: <RootBoundary />,
+        path: '/',
+        element: <KeepAlive />,
+        children: [
+            {
+                path: '/home',
+                element: <Home />,
+                errorElement: <RootBoundary />,
+            },
+            {
+                path: '/list',
+                element: <List />,
+                errorElement: <RootBoundary />,
+            },
+        ]
     },
     {
         path: '/my',
@@ -62,11 +69,11 @@ const routes: RouteObject[] = [
     },
 
     // 路由重定向
-    {
-        path: '/',
-        element: <Demo />,
-        errorElement: <RootBoundary />
-    }
+    // {
+    //     path: '/',
+    //     element: <Demo />,
+    //     errorElement: <RootBoundary />
+    // }
 ];
 
 const router = createHashRouter(routes);

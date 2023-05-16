@@ -4,6 +4,7 @@ import get from 'lodash/get';
 import useAxiosMethods from "./useAxiosMethods";
 import { useRef, useState } from "react";
 import { toast } from "@/components/toast";
+import { useRequest } from "ahooks";
 
 
 export default function useMockPagination<T>(request: RequestTuple, params: RequestProps<T>) {
@@ -53,6 +54,8 @@ export default function useMockPagination<T>(request: RequestTuple, params: Requ
 
     };
 
+    const alibabaHook = useRequest(http, {});
+
     const clear = () => {
         setList(() => {
             pageConfig.current.pageNum = 1;
@@ -67,6 +70,7 @@ export default function useMockPagination<T>(request: RequestTuple, params: Requ
     };
 
     return {
+        ...alibabaHook,
         list,
         clear,
         getList: http,

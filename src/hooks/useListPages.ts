@@ -5,12 +5,9 @@ import { RequestTuple } from "@/type/request";
 
 
 export default function useListPages(request: RequestTuple, params = {}) {
-    const { list, initList, getList, ifDone } = useMockPagination(request, params);
+    const { loading, list, initList, getList, ifDone } = useMockPagination(request, params);
 
-    useEffect(() => {
-        getList();
-    }, []);
     useReachBottom(getList);
 
-    return { list, ifDone };
+    return { loading, list, ifDone };
 }

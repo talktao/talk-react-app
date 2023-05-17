@@ -22,7 +22,7 @@ const List: FC = () => {
                     </div>
                 ))
             }
-            {list.length !== 0 && <FetchTips ifDone={ifDone} />}
+            <FetchTips ifDone={ifDone} />
         </div>
     </Layout>;
 

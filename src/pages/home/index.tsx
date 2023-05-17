@@ -10,6 +10,7 @@ import HomeLoader from '@/components/skeleton/homeLoader';
 import { useNavigate } from 'react-router';
 import { ScrollRestoration } from 'react-router-dom';
 import Layout from '@/components/layout';
+import RightArrow from '@/images/rightArrow.svg';
 
 interface List {
     id: number;
@@ -53,7 +54,10 @@ const Home: FC = () => {
                     {
                         get(data, 'list', []).map(item => (
                             <div className={styles.item} key={item.id} onClick={() => deep(item.id)}>
-                                <span>{item.content}</span>
+                                <div className={styles.info}>
+                                    <span>{item.content}</span>
+                                    {item.id === 9 && <img className={styles.rightArrow} src={RightArrow} alt='' />}
+                                </div>
                             </div>
                         ))
                     }

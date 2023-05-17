@@ -42,9 +42,22 @@
             }
 
             .item {
+                display: flex;
                 line-height: 22px;
                 padding: 12px 0;
                 border-bottom: 1px solid #cccccc55;
+
+                .info {
+                    width: 100%;
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+
+                    .rightArrow {
+                        width: 16px;
+                        height: 16px;
+                    }
+                }
             }
 
             .item:nth-last-child(1) {

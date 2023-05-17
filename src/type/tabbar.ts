@@ -1,4 +1,4 @@
-export interface tabbarProps {
+export interface TabbarProps {
     name: string,
     icon: string,
     active: string,

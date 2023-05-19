@@ -1,4 +1,3 @@
-import { useEffect } from "react";
 import useMockPagination from "./useMockPagination";
 import useReachBottom from "./useReachBottom";
 import { RequestTuple } from "@/type/request";

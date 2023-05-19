@@ -15,7 +15,7 @@ module.exports = function (app) {
             },
             onProxyReq(proxyReq, req, res) {
                 // add custom header to request
-                // proxyReq.setHeader('Authorization', 'Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIxIiwicm9sZSI6IjIiLCJpc3MiOiJhNGYyNmY2Yy1iMDY2LTQzY2UtYmVhNC03ODdjYTMyNTdkNWUiLCJhdWQiOiJTSEVOU0hJUElOX01BVEVfVVNFUiIsImlhdCI6MTY3NzEzOTMzMCwiZXhwIjoxNjc3MTQ2NTMwfQ.DCCf7UQFdz_eWPmtJJqP2bRFnXjImFvUtNl_wh43C9U');
+                // proxyReq.setHeader('Authorization', 'xxxxx');
                 // console.log(req)
                 // or log the req
             }

@@ -14,7 +14,6 @@ reportWebVitals();
 
 
 if (process.env.NODE_ENV === 'development') {
-    require('./mock/index'); // 开启mock
     // const VConsole = require('vconsole');
     // var vConsoler = new VConsole();
     console.log('development');

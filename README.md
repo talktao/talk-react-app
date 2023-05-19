@@ -1,7 +1,5 @@
----
-theme: devui-blue
-highlight: atom-one-dark
----
+# React18+Less H5开发模板
+
 ## 描述
 
 基于React + Webpack + Mobx + Less + TS + rem适配方案，构建H5模板脚手架 

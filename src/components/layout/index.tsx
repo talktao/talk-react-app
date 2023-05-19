@@ -1,4 +1,4 @@
-import { FC } from "react";
+import { FC, useEffect } from "react";
 import { ReactComponentProps } from "@/type/reactComponent";
 import useSetTitle from "@/hooks/useSetTitle";
 

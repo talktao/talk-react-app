@@ -24,26 +24,24 @@ interface Data {
 }
 
 const Home: FC = () => {
-
     const navigate = useNavigate();
 
     const { data, error, loading } = useMockRequest<Data>(ApiCollector.getHome, {});
 
     const deep = (id) => {
 
-        if (id === 9) return navigate('/list');
+        if (id === 9) return navigate(routesUrl.list);
     };
 
     if (loading) {
         return <div className={styles.loader}>
             <HomeLoader />
-            <Tabbar path={routesUrl.home} />
+            <Tabbar />
         </div>;
     }
 
     return <Layout title="首页" >
         <div className={styles.home}>
-            <ScrollRestoration />
             <div className={styles.content}>
                 <div className={styles.title}>
                     <img src={Logo} alt="" />
@@ -63,7 +61,7 @@ const Home: FC = () => {
                     }
                 </div>
             </div>
-            <Tabbar path={routesUrl.home} />
+            <Tabbar />
         </div>
     </Layout>;
 

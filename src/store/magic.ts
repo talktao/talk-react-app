@@ -10,8 +10,11 @@ class MagicStore {
         makeAutoObservable(this);
     }
 
+    // 修改magicText文本的函数
     triggerMagic = (tag: string) => {
         this.magicText = tag;
+        console.log(this.magicText, 'this.magicText');
+
     };
 }
 

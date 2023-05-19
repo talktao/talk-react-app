@@ -1,11 +1,11 @@
 {
   "files": {
     "main.css": "/talk-react-app/static/css/main.ff100209.css",
-    "main.js": "/talk-react-app/static/js/main.fafb2171.js",
+    "main.js": "/talk-react-app/static/js/main.dc90ed31.js",
     "static/css/419.7a16871c.chunk.css": "/talk-react-app/static/css/419.7a16871c.chunk.css",
     "static/js/419.0c316485.chunk.js": "/talk-react-app/static/js/419.0c316485.chunk.js",
-    "static/css/194.5028cdd7.chunk.css": "/talk-react-app/static/css/194.5028cdd7.chunk.css",
-    "static/js/194.a8ad458c.chunk.js": "/talk-react-app/static/js/194.a8ad458c.chunk.js",
+    "static/css/862.5028cdd7.chunk.css": "/talk-react-app/static/css/862.5028cdd7.chunk.css",
+    "static/js/862.e7eab594.chunk.js": "/talk-react-app/static/js/862.e7eab594.chunk.js",
     "static/css/908.1c768bb1.chunk.css": "/talk-react-app/static/css/908.1c768bb1.chunk.css",
     "static/js/908.5a90a869.chunk.js": "/talk-react-app/static/js/908.5a90a869.chunk.js",
     "static/js/27.f2744d43.chunk.js": "/talk-react-app/static/js/27.f2744d43.chunk.js",
@@ -25,6 +25,6 @@
   },
   "entrypoints": [
     "static/css/main.ff100209.css",
-    "static/js/main.fafb2171.js"
+    "static/js/main.dc90ed31.js"
   ]
 }

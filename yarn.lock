@@ -11248,9 +11248,9 @@ tailwindcss@^3.0.2:
     sucrase "^3.29.0"
 
 talk-scripts@^0.0.11:
-  version "0.0.10"
-  resolved "https://registry.npmmirror.com/talk-scripts/-/talk-scripts-0.0.10.tgz#a618786dcfb62d20c79fa3f90b43bdafc87f102a"
-  integrity sha512-hWJ/SzLEkUgJPk+GnGBFXgw5WRxUuBpoaygviw9ZnfsP9Rpy4IhKV3zZXDNeehN/j5Jl/rfL2UWd4JypLxEtng==
+  version "0.0.11"
+  resolved "https://registry.npmmirror.com/talk-scripts/-/talk-scripts-0.0.11.tgz#868289b9256c99017537cb006f5f51240c54df98"
+  integrity sha512-GVFgzzly7vZ2uMKuvpXUxqu/u4DgG3NuURG0REOj6oJ4/zHxOKzb9jRbBAmWlSyopBu+g8AkKvHti1i7jpxdVg==
   dependencies:
     "@babel/core" "^7.16.0"
     "@pmmmwh/react-refresh-webpack-plugin" "^0.5.3"

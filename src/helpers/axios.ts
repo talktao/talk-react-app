@@ -22,6 +22,15 @@ export const mockAxios = axios.create({
     baseURL: `https://www.fastmock.site/mock/${fastmockId}`
 });
 
+export const apiAxios = axios.create({
+    baseURL: `https://xxxx`
+});
+
+export const otherAxios = axios.create({
+    baseURL: `https://xxx`
+});
+
+
 // 添加响应拦截器
 mockAxios.interceptors.response.use(response => response, createErrorLog(['status', 'statusText']));
 

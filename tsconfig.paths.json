@@ -3,32 +3,32 @@
     "baseUrl": "./",
     "strict": false,
     "paths": { // 指定模块的路径，和baseUrl有关联，和webpack中resolve.alias配置一样
+      "@/components/*": [
+        "src/components/*"
+      ],
+      "@/const/*": [
+        "src/const/*"
+      ],
       "@/global/*": [
         "src/global/*"
-      ], 
+      ],
       "@/helpers/*": [
         "src/helpers/*"
       ],
-      "@/components/*": [
-        "src/components/*"
+      "@/hooks/*": [
+        "src/hooks/*"
+      ],
+      "@/images/*": [
+        "src/images/*"
+      ],
+      "@/pages/*": [
+        "src/pages/*"
       ],
       "@/store/*": [
         "src/store/*"
       ],
-      "@/hooks/*": [
-        "src/hooks/*"
-      ],  
-      "@/images/*": [
-        "src/images/*"
-      ],
-      "@/const/*": [
-        "src/const/*"
-      ],   
       "@/type/*": [
         "src/type/*"
-      ],
-      "@/pages/*": [
-        "src/pages/*"
       ],
     },
     "jsx": "react"

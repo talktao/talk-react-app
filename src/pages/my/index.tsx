@@ -24,7 +24,7 @@ const My: FC = () => {
             <span className={styles.btn}>
                 {magicStore.magicText === '' ? <button onClick={onMagic}>点我有魔法</button> : magicStore.magicText}
             </span>
-            <Tabbar path={routesUrl.my} />
+            <Tabbar />
         </div>
     </Layout>;
 

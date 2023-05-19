@@ -9,13 +9,8 @@ const ApiCollector: {
         url: '/api/home'
     },
 
-    getCmsCatalogList: {
-        method: 'get',
-        url: '/api/login',
-    },
-
     getList: {
-        method: 'get',
+        method: 'post',
         url: '/api/list'
     }
 };

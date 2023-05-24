@@ -19,7 +19,7 @@
     "react-dom": "^18.1.0",
     "react-router": "6.8.1",
     "react-router-dom": "6.8.1",
-    "talk-scripts": "^0.0.11",
+    "talk-scripts": "^0.0.12",
     "web-vitals": "^2.1.0"
   },
   "scripts": {

@@ -8,13 +8,13 @@ import { routesUrl } from '@/const/routes';
 import get from 'lodash/get';
 import HomeLoader from '@/components/skeleton/homeLoader';
 import { useNavigate } from 'react-router';
-import { ScrollRestoration } from 'react-router-dom';
 import Layout from '@/components/layout';
 import RightArrow from '@/images/rightArrow.svg';
 
 interface List {
     id: number;
     content: string;
+    isRoute?: boolean;
 }
 
 interface Data {
@@ -31,6 +31,7 @@ const Home: FC = () => {
     const deep = (id) => {
 
         if (id === 9) return navigate(routesUrl.list);
+        if (id === 10) return navigate(routesUrl.virtuaList);
     };
 
     if (loading) {
@@ -54,7 +55,7 @@ const Home: FC = () => {
                             <div className={styles.item} key={item.id} onClick={() => deep(item.id)}>
                                 <div className={styles.info}>
                                     <span>{item.content}</span>
-                                    {item.id === 9 && <img className={styles.rightArrow} src={RightArrow} alt='' />}
+                                    {item.isRoute && <img className={styles.rightArrow} src={RightArrow} alt='' />}
                                 </div>
                             </div>
                         ))

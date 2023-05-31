@@ -12,6 +12,11 @@ const ApiCollector: {
     getList: {
         method: 'post',
         url: '/api/list'
+    },
+
+    getVirtuaList: {
+        method: 'get',
+        url: '/api/virtuaList'
     }
 };
 

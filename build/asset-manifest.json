@@ -1,0 +1,32 @@
+{
+  "files": {
+    "main.css": "/talk-react-app/static/css/main.ff100209.css",
+    "main.js": "/talk-react-app/static/js/main.708ea3cf.js",
+    "static/css/866.a864588a.chunk.css": "/talk-react-app/static/css/866.a864588a.chunk.css",
+    "static/js/866.9a991437.chunk.js": "/talk-react-app/static/js/866.9a991437.chunk.js",
+    "static/css/908.1c768bb1.chunk.css": "/talk-react-app/static/css/908.1c768bb1.chunk.css",
+    "static/js/908.5a90a869.chunk.js": "/talk-react-app/static/js/908.5a90a869.chunk.js",
+    "static/css/319.6424f391.chunk.css": "/talk-react-app/static/css/319.6424f391.chunk.css",
+    "static/js/319.c4983196.chunk.js": "/talk-react-app/static/js/319.c4983196.chunk.js",
+    "static/css/980.54a091a4.chunk.css": "/talk-react-app/static/css/980.54a091a4.chunk.css",
+    "static/js/980.409893f3.chunk.js": "/talk-react-app/static/js/980.409893f3.chunk.js",
+    "static/js/27.f2744d43.chunk.js": "/talk-react-app/static/js/27.f2744d43.chunk.js",
+    "static/js/772.de8400e2.chunk.js": "/talk-react-app/static/js/772.de8400e2.chunk.js",
+    "static/media/logo.png": "/talk-react-app/static/media/logo.6679f20bad0a3b0859bf.png",
+    "static/media/Poppins-Bold.eot": "/talk-react-app/static/media/Poppins-Bold.aa7e7c78684f2438b4ae.eot",
+    "static/media/Poppins-Bold.svg": "/talk-react-app/static/media/Poppins-Bold.35249c5d5aab460617df.svg",
+    "static/media/Poppins-Bold.woff": "/talk-react-app/static/media/Poppins-Bold.dcd9bfe1c6114bb6757f.woff",
+    "static/media/Poppins-Bold.ttf": "/talk-react-app/static/media/Poppins-Bold.1d8c307799becfd1150a.ttf",
+    "static/media/Poppins-Bold.woff2": "/talk-react-app/static/media/Poppins-Bold.5042994031e52c9b7ae3.woff2",
+    "index.html": "/talk-react-app/index.html",
+    "static/media/home-active.svg": "/talk-react-app/static/media/home-active.a3c1f2a3521c62f42a4b51d5617210af.svg",
+    "static/media/home.svg": "/talk-react-app/static/media/home.2538943b125e2fcb7ac37b745f2080d4.svg",
+    "static/media/rightArrow.svg": "/talk-react-app/static/media/rightArrow.6fdd0650b4ca2d74151b7351dc50e911.svg",
+    "static/media/my-active.svg": "/talk-react-app/static/media/my-active.1ed73fdb0d257be913917f231531c938.svg",
+    "static/media/my.svg": "/talk-react-app/static/media/my.c9972418418dd8075254bc47bde75ea0.svg"
+  },
+  "entrypoints": [
+    "static/css/main.ff100209.css",
+    "static/js/main.708ea3cf.js"
+  ]
+}

@@ -2,10 +2,10 @@ import { FC } from 'react';
 import ApiCollector from '@/const/apis';
 import useListPages from '@/hooks/useListPages';
 import FetchTips from '@/components/fetchTips';
-import Card from './card';
 import Layout from '@/components/layout';
 import ListLoader from '@/components/skeleton/listLoader';
 import styles from './index.module.less';
+import Card from '@/components/card';
 
 const List: FC = () => {
     const { loading, list, ifDone } = useListPages(ApiCollector.getList, {});
